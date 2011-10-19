@@ -80,14 +80,14 @@ class LeadSearch(webapp.RequestHandler):
             if (leads.is_customer == True):
                 self.response.out.write("""<p class="detail">Customer or Lead?: Customer<br>""")
                 self.response.out.write("""
-                <p class="param">Caller: %s <br>
-                <p class="param">User ID: %s <br>
-                <p class="param">Portal ID: %s <br>
-                <p class="param">App Name: %s <br>
-                <p class="param">Callback URL: %s <br>
-                <p class="param">Page URL: %s <br>
-                <p class="param">Canvas URL: %s <br>
-                <p class="param">Request Signature: %s <br>"""
+                <p class="param">Caller: <span name="caller">%s</span> <br>
+                <p class="param">User ID: <span name="userid">%s</span> <br>
+                <p class="param">Portal ID: <span name="portalid">%s</span> <br>
+                <p class="param">App Name: <span name="appname">%s</span> <br>
+                <p class="param">Callback URL: <span name="callbackurl">%s</span> <br>
+                <p class="param">Page URL: <span name="pageurl">%s</span> <br>
+                <p class="param">Canvas URL: <span name="canvasurl">%s</span> <br>
+                <p class="param">Request Signature: <span name="requestsignature">%s</span> <br>"""
                 % (caller, user_id, portal_id, app_name, callback, page_url, canvas_url, signature))
             else:
                 self.response.out.write("""<p class="detail">Customer or Lead?: Lead<br>""")
@@ -100,14 +100,14 @@ class LeadSearch(webapp.RequestHandler):
                 </div></body></html>"""
                 % (leads.public_lead_link, leads.lead_score, leads.twitter_name, leads.website, leads.lead_nurturing_active))
                 self.response.out.write("""
-                <p class="param">Caller: %s <br>
-                <p class="param">User ID: %s <br>
-                <p class="param">Portal ID: %s <br>
-                <p class="param">App Name: %s <br>
-                <p class="param">Callback URL: %s <br>
-                <p class="param">Page URL: %s <br>
-                <p class="param">Canvas URL: %s <br>
-                <p class="param">Request Signature: %s <br>"""
+                <p class="param">Caller: <span name="caller">%s</span> <br>
+                <p class="param">User ID: <span name="userid">%s</span> <br>
+                <p class="param">Portal ID: <span name="portalid">%s</span> <br>
+                <p class="param">App Name: <span name="appname">%s</span> <br>
+                <p class="param">Callback URL: <span name="callbackurl">%s</span> <br>
+                <p class="param">Page URL: <span name="pageurl">%s</span> <br>
+                <p class="param">Canvas URL: <span name="canvasurl">%s</span> <br>
+                <p class="param">Request Signature: <span name="requestsignature">%s</span> <br>"""
                 % (caller, user_id, portal_id, app_name, callback, page_url, canvas_url, signature))
                     
 
