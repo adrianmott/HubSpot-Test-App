@@ -7,7 +7,7 @@ app_url = 'https://app.hubspotqa.com/market/53/canvas/testapp/'
 class MarketplaceContainerWeb(unittest.TestCase):
 
     def setUp(self):
-        self.application_name = 'AppMarketplace'
+        self.app_name = 'AppMarketplace'
         self.unique_id = 53
         
         login_manager.login(self.driver, 53, 'qa', 'selenium@hubspot.com', 'U!feM!kO')
