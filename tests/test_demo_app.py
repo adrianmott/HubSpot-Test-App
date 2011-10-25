@@ -48,10 +48,13 @@ class MarketplaceContainerWeb(unittest.TestCase):
         }
         param_fields = self.driver.find_elements_by_css_selector('p.param > span')
         for field in param_fields:
-            self.assertTrue(field.text == param_values[field.get_attribute('name')], "Expected: %s, Got: %s, for param named: %s"%
-                                                                    param_values[field.get_attribute('name')],
-                                                                    field.text,
-                                                                    field.name)
+            expect = param_values[field.get_attribute('name')]
+            actual = field.text
+            field_name = field.get_attribute('name')
+            self.assertTrue(field.text == param_values[field.get_attribute('name')], "Expected: %s, Got: %s, for param named: %s" %
+                                                                    (expect,
+                                                                    actual,
+                                                                    field_name))
 
     def __test_invalid_api_key(self):
         """try to search the demo app with a nonexistent and make sure we get an error"""
