@@ -1,4 +1,6 @@
 *.pyc
 .*.swp
 *~
-
+.DS_STORE
+tests/selenium-server.jar
+tests/logs/*
