@@ -5,11 +5,9 @@ from test_framework.fixtures import login_manager
 app_url = 'https://app.hubspotqa.com/market/53/canvas/testapp/'
 
 class MarketplaceContainerWeb(unittest.TestCase):
+    app_name = 'AppMarketplace'
 
     def setUp(self):
-        self.app_name = 'AppMarketplace'
-        self.unique_id = 53
-        
         login_manager.login(self.driver, 53, 'qa', 'selenium@hubspot.com', 'U!feM!kO')
         self.driver.implicitly_wait(5)
 
